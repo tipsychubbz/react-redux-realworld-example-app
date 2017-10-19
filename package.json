@@ -5,12 +5,13 @@
   "engines": {
     "node": "6.11.1"
   },
-  
   "devDependencies": {
     "cross-env": "^4.0.0",
     "react-scripts": "0.9.5"
   },
   "dependencies": {
+    "cross-env": "^4.0.0",
+    "react-scripts": "0.9.5",
     "history": "^4.6.3",
     "marked": "^0.3.6",
     "prop-types": "^15.5.10",
@@ -27,9 +28,11 @@
     "superagent-promise": "^1.1.0"
   },
   "scripts": {
-    "start": "cross-env PORT=4100 react-scripts start",
+    "local": "cross-env PORT=4100 react-scripts start",
     "build": "react-scripts build",
     "test": "cross-env PORT=4100 react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postBuild": "react-scripts build",
+    "start": "node index.js"
   }
 }
