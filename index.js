@@ -3,9 +3,7 @@ var path = require('path');
 
 app = express();
 
-app.get('/favicon.ico', function(req, res) {
-    res.status(204);
-});
+
 app.use(express.static(path.join(__dirname, 'build')));
 
 const port = process.env.PORT || 5000;
