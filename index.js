@@ -9,4 +9,8 @@ const port = process.env.PORT || 5000;
 
 app.listen(port);
 
+app.get('/favicon.ico', function(req, res) {
+    res.status(204);
+});
+
 console.log('server started ' + port);
